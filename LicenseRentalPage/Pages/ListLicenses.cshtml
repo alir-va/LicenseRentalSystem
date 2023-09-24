@@ -1,0 +1,19 @@
+﻿@page
+@model LicenseRentalPage.Pages.ListLicensesModel
+@{
+}
+
+<table class="table table-bordered table-striped">
+	@{
+		if (Model.DisplayData != null)
+		{
+			foreach (var item in Model.DisplayData)
+			{
+				<tr>
+					<td>@item.Id</td>
+					<td>@item.Status</td>
+				</tr>
+			}
+		}
+	}
+</table>

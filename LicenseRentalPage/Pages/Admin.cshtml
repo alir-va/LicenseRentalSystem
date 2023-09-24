@@ -1,0 +1,13 @@
+﻿@page
+@model LicenseRentalPage.Pages.AdminModel
+@{
+	ViewData["Title"] = "Admin panel";
+}
+
+<p><b>@ViewData["Title"]</b></p>
+
+<form method="get">
+	<p><button type="submit" asp-page="/AddLicense">Add License</button></p>
+	<p><button type="submit" asp-page="/ListLicenses">List Licenses</button></p>
+</form>
+

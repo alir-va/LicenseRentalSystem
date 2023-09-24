@@ -1,0 +1,20 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Home";
+}
+
+<p>License machine [@Model.RequestId]</p>
+<form method="post">
+	<p>
+		<button type="submit">Rent License</button>
+	</p>
+</form>
+
+<form method="get">	<p><button type="submit" asp-page="/Admin">Admin</button></p></form>
+
+@if (!string.IsNullOrEmpty(Model.RentInfo))
+{
+	<p class="alert alert-success">@Model.RentInfo</p>
+}
+
